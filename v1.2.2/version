@@ -1,0 +1,9 @@
+version
+0.1.4
+
+1.body的刷新在重新typing以后
+
+
+update：
+1.增加一个button控制typing的开始与停止，默认一直typing
+

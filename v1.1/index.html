@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Typing Effect with Fixed Cursor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        #typing {
+            font-size: 24px;
+            color: #333;
+            white-space: pre-wrap; /* 保持换行和空格 */
+            overflow: hidden;
+            position: relative; /* 设置相对定位以支持伪元素 */
+            display: inline-block;
+        }
+        /* 光标的样式 */
+        #typing::after {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1em; /* 固定光标高度 */
+            background-color: #333;
+            position: absolute;
+            right: 0;
+            animation: blink 0.7s steps(1) infinite;
+        }
+        /* 光标闪烁效果 */
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="typing"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
